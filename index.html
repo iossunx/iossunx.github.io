@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aicafe - 專業客製化開發與精密加工</title>
+    <style>
+        /* 基礎設定 */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, '微軟正黑體', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* 頂部橫幅 */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #e0e0e0;
+        }
+
+        /* 內容容器 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 標題樣式 */
+        h2 {
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        /* 服務項目網格 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #2a5298;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        /* 資訊區塊 (服務地區 & 成功案例) */
+        .info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .info-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-section li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .info-section li::before {
+            content: "✓ ";
+            color: #2a5298;
+            font-weight: bold;
+        }
+        a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* 底部版權 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* 手機版適應 */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>aicafe</h1>
+        <p>跨界整合技術專家｜軟體開發與精密加工維修</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>主要營業項目</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>💻 客製化程式撰寫</h3>
+                    <p>針對企業需求，量身打造專屬的軟體解決方案，提升作業效率。</p>
+                </div>
+                <div class="service-card">
+                    <h3>🤖 客製化AI程式應用開發</h3>
+                    <p>導入最新人工智慧技術，開發智能化應用，助力企業數位轉型。</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌐 客製化網頁開發</h3>
+                    <p>現代化網站建置，包含完善的 <strong>SEO 搜尋引擎優化</strong> 與 <strong>AI 智慧化功能整合</strong>。</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚙️ 精密金屬與零件加工</h3>
+                    <p>提供專業的金屬桌板加工，以及各類客製化零件加工服務 (CNC、NC)。</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 高精度點膠機維修</h3>
+                    <p>專精於日系高精密點膠設備檢修，包含 <strong>IEI 岩下</strong> 與 <strong>日商武蔵 (Musashi)</strong>。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>📍 主要服務地區</h2>
+            <div>
+                <span class="tag">台北市</span>
+                <span class="tag">新北市</span>
+                <span class="tag">桃園市</span>
+                <span class="tag">新竹縣市</span>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>🌟 成功案例</h2>
+            <ul>
+                <li><a href="http://www.championpro.com.tw" target="_blank" rel="noopener noreferrer">Championpro (www.championpro.com.tw)</a></li>
+                <li><a href="https://www.spilglobal.com/zh-TW/" target="_blank" rel="noopener noreferrer">SPIL 矽品精密 (www.spilglobal.com)</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 aicafe. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
